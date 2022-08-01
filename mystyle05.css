@@ -48,10 +48,52 @@ div>span>h2 {
     background: gray;
 }
 
-.hide {
+.hide { /* 화면에 노출 안됨 */
     width: 0;
     height: 0;
     margin: 0;
     padding: 0;
     font-size: 0;
 }
+
+#nav {
+    width: 300px;
+    height: 500px;
+    background: beige;
+    margin: auto;
+}
+
+#nav>ul {   /* id=nav의 자식중에서 ul태그 */
+    list-style: none;
+}
+
+#nav>.news {    /* id=nav 안에서 모든 class=news */
+    background: olive;
+    font-weight: bold;
+}
+
+/* 태그의 상세 속성 접근 */
+#nav>ol>li:nth-child(2) {   /* <li> 요소 중에서 2번째 */
+    font-weight: bold;
+}
+
+/* 아이티윌 링크만 css적용 */
+#nav>ol>li>a {
+    width: 200px;
+    height: 100px;
+    background-color: hotpink;
+    text-decoration-style: wavy;
+}
+
+/*
+   참조 https://www.w3schools.com/cssref/sel_active.asp
+   a:link     - 일반적 링크 및 방문하지 않은 링크
+   a:visited  - 방문했던 링크
+   a:hover    - 마우스 올렸을 때 링크
+   a:active   - 마우스 누르는 순간의 링크
+*/
+
+a:link      {color: black; text-decoration: none;}
+a:visited   {color: black; text-decoration: none;}
+a:hover     {color: black; text-decoration: underline;}
+a:active    {color: black; text-decoration: none;}
